@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--Icons-->
+  <script src="https://use.fontawesome.com/d43ae5a69d.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <title>Supermarket</title>
+</head>
+
+<body>
+  <!--Header section-->
+  <header class="main-header">
+    <div class="container">
+      <div class="row ">
+        <!--Logo-->
+        <section class="logo col-xs-2">
+          <img src="img/logo.svg" alt="logo">
+        </section>
+        <!--Header for finding-->
+        <div class="header-section col-xs-10" data-header="find" data-active="true">
+          <section class="find active">
+            <div class="header">
+              <h2>กรุณาเลือกสินค้า</h2>
+            </div>
+
+            <div class="products-selection">
+              <!--Selecting catagories-->
+              <ul class="nav nav-pills">
+                <li role="presentation" class="active fruits-tab"><a href="#" data-tab="fruits">ผลไม้</a></li>
+                <li role="presentation" class="vegetables-tab"><a href="#" data-tab="vegetables">ผัก</a></li>
+                <li role="presentation" class="other-tab"><a href="#" data-tab="other">อื่นๆ</a></li>
+              </ul>
+              <!--Searching product-->
+              <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                  <input type="text" class="form-control find-card" placeholder="Enter product">
+                  <span class="input-group-btn">
+                    <button class="btn search" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+        <!--Header for weigh-->
+        <div class="header-section col-xs-10  hide" data-header="weigh">
+          <section class="weigh">
+            <div class="header">
+              <h2>ชั่งน้ำหนักสินค้า</h2>
+            </div>
+          </section>
+        </div>
+        <!--Header for buy-->
+        <div class="header-section col-xs-10 hide" data-header="buy">
+          <section class="buy">
+            <div class="header">
+              <h2>ชำระเงิน</h2>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--End header-->
+
+  <!--Main section-->
+  <main class="main">
+    <div class="container">
+      <div class="row">
+        <!--Left side navigation menu-->
+        <nav class="navigation col-xs-2">
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active find"><a href="#">เลือกสินค้า</a></li>
+            <li role="presentation" class="weigh"><a href="#">ชั่งน้ำหนักสินค้า <span class="badge"></span></a></li>
+            <li role="presentation" class="buy"><a href="#">ชำระเงิน <span class="badge"></span></a></li>
+          </ul>
+        </nav>
+        <!--Table with products grouped by categories-->
+        <section class="field products col-xs-10" data-active="true">
+          <!--Fruits category-->
+          <div class="fruits active product-cat">
+            <!--Cards with product-->
+            <!--Apple-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/apple.png" alt="apple">
+              </figure>
+              <div class="content">
+                <h3 class="name">แอปเปิ้ล</h3>
+                <div class="price"><span class="label label-primary">60 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Banana-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/banana.png" alt="banana">
+              </figure>
+              <div class="content">
+                <h3 class="name">กล้วย</h3>
+                <div class="price"><span class="label label-primary">50 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Cherry-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/cherry.png" alt="cherry">
+              </figure>
+              <div class="content">
+                <h3 class="name">เชอร์รี่</h3>
+                <div class="price"><span class="label label-primary">120 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Pear-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/pear.png" alt="pear">
+              </figure>
+              <div class="content">
+                <h3 class="name">ลูกแพร์</h3>
+                <div class="price"><span class="label label-primary">150 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Strawberry-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/strawberry.png" alt="strawberry">
+              </figure>
+              <div class="content">
+                <h3 class="name">สตอเบอร์รี่</h3>
+                <div class="price"><span class="label label-primary">200 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+          </div>
+          <!--Vegetables category-->
+          <div class="vegetables hide product-cat" data-first-load="true">
+            <!--Cabbage-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/cabbage.png" alt="cabbage">
+              </figure>
+              <div class="content">
+                <h3 class="name">กระหล่ำปลี</h3>
+                <div class="price"><span class="label label-primary">35 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Carrot-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/carrot.png" alt="carrot">
+              </figure>
+              <div class="content">
+                <h3 class="name">แครอท</h3>
+                <div class="price"><span class="label label-primary">40 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Cucumber-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/cucumber.png" alt="cucumber">
+              </figure>
+              <div class="content">
+                <h3 class="name">แตงกวา</h3>
+                <div class="price"><span class="label label-primary">30 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Onion-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/onion.png" alt="onion">
+              </figure>
+              <div class="content">
+                <h3 class="name">หอมแดง</h3>
+                <div class="price"><span class="label label-primary">60 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Tomato-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/tomato.png" alt="tomato">
+              </figure>
+              <div class="content">
+                <h3 class="name">มะเขือเทศ</h3>
+                <div class="price"><span class="label label-primary">50 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+          </div>
+          <!--Other category-->
+          <!--For optimization img will be added in js when user select section-->
+          <div class="other hide product-cat">
+            <!--Buckwheat-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/buckwheat.png" alt="buckwhete">
+              </figure>
+              <div class="content">
+                <h3 class="name">เมล็ดบัควีท</h3>
+                <div class="price"><span class="label label-primary">250 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Cheese-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/cheese.png" alt="cheese">
+              </figure>
+              <div class="content">
+                <h3 class="name">ชีส</h3>
+                <div class="price"><span class="label label-primary">500 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Cookie-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/cookie.png" alt="cookie">
+              </figure>
+              <div class="content">
+                <h3 class="name">คุกกี้</h3>
+                <div class="price"><span class="label label-primary">300 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Flour-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/flour.png" alt="flour">
+              </figure>
+              <div class="content">
+                <h3 class="name">แป้ง</h3>
+                <div class="price"><span class="label label-primary">100 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+            <!--Sugar-->
+            <article class="card">
+              <figure class="image">
+                <img src="img/sugar.png" alt="sugar">
+              </figure>
+              <div class="content">
+                <h3 class="name">น้ำตาล</h3>
+                <div class="price"><span class="label label-primary">90 บาท</span></div>
+                <button type="button" class="card-btn">หยิบใส่ตะกร้า</button>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!--Field for weigh selection product-->
+        <section class="field weigh-field col-xs-10 hide"></section>
+        <!--Field for buy selection product-->
+        <section class="field bill-field col-xs-10 hide">
+          <article class="field buy-field"></article>
+          <article class="bill">
+            <h4 class="bill-header">ตลาดของสด<br><small>รวมชำระเงิน</small></h4>
+            <!--Make in js. name | per kg | price-->
+            <ul class="list">
+              <li data-price>0 บาท</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </div>
+  </main>
+  <!--End main-->
+
+  <script src="js/script.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

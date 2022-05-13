@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  background: radial-gradient(#9966cc, #333399);
+  font-family: 'Kanit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.logo,
+.navigation {
+  background-color: #1f2637; }
+
+.header-section,
+.card,
+.bill {
+  background-color: #eef1f7; }
+
+.main-header {
+  color: #444c63; }
+
+.products,
+.weigh-field,
+.bill-field {
+  background-color: white; }
+
+.main {
+  display: flex;
+  flex-grow: 1; }
+  .main .row {
+    height: 100%; }
+
+.main-header .row,
+.main .row {
+  display: flex; }
+
+.products-selection .nav {
+  display: flex;
+  align-items: center; }
+
+.logo {
+  border-bottom: 10px solid rgba(24, 30, 44, 0.8); }
+  .logo img {
+    width: 100%;
+    height: 100%; }
+
+.header-section {
+  align-self: stretch;
+  padding: 0; }
+  .header-section .header,
+  .header-section .products-selection {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .header-section .products-selection {
+    display: flex;
+    justify-content: space-between; }
+  .header-section .header {
+    border-bottom: 5px solid #dadfea; }
+  .header-section .find,
+  .header-section .weigh,
+  .header-section .buy {
+    border-bottom: 10px solid #dadfea; }
+
+.find,
+.weigh,
+.buy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; }
+
+.navigation {
+  padding: 0; }
+
+.product-cat,
+.weigh-field,
+.buy-field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.product-cat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px; }
+
+.card {
+  width: 200px;
+  margin-bottom: 40px; }
+  .card .content {
+    text-align: center; }
+  .card .name {
+    padding: 15px 0; }
+  .card .price,
+  .card .card-btn {
+    min-height: 36px;
+    font-size: 20px;
+    flex-wrap: wrap; }
+  .card .card-btn {
+    color: white;
+    width: 100%;
+    background-color: #337ab7;
+    border: none; }
+  .card .ok {
+    background-color: #5cb85c; }
+  .card .cancel {
+    background-color: #d9534f; }
+  .card .buttons {
+    display: flex; }
+    .card .buttons .card-btn {
+      width: 50%; }
+  .card .price {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; }
+
+.footer .container {
+  background-color: #181e2c;
+  color: white;
+  text-align: center;
+  padding: 15px; }
+
+.weigh-field,
+.buy-field {
+  padding-top: 50px; }
+
+.bill-field {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0; }
+  .bill-field .bill {
+    width: 20%;
+    height: 100%;
+    min-width: 160px; }
+  .bill-field .bill-header {
+    text-align: center; }
+  .bill-field .buy-field {
+    width: 75%; }
+
+.bill .list {
+  list-style-type: none;
+  list-style-position: inside; }
+.bill li {
+  padding: 5px; }
+
